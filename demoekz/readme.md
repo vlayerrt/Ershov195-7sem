@@ -2,3 +2,12 @@
 https://esat.worldskills.ru/competencies/dac59f20-134b-4aa4-94e5-518c488ccc9e/categories/d747aed4-5204-4ab4-a3f1-dec61f99735d
 ## подготовка
 https://docs.google.com/document/d/17dkgRFIxEAdOvFsUuCD5TGeWHCqcC7U-Ha5MJ0EfdtI/edit#
+![image](https://user-images.githubusercontent.com/39220694/188390968-a3e0d586-5bc2-4793-aa07-3dcd178ebf63.png)
+
+Модуль 1: Анализ и проектирование требований, бизнеспроцессов - UML-диаграммы
+Модуль 2: Проектирование реляционного хранилища данных
+Модуль 3: Разработка баз данных, объектов баз данных и импорт - ER-модель БД
+Модуль 4: Разработка desktop-приложений
+Модуль 6: Создание инсталляторов
+Модуль 7: Тестирование программных решений
+Модуль 9: Общий профессионализм решения
