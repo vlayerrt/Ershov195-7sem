@@ -73,6 +73,11 @@ ER - entity relationship - сущность и связь <br>
 ![image](https://user-images.githubusercontent.com/39220694/189847462-101a36f8-33bf-4a1a-8f04-38f7742343b2.png)
 ![image](https://user-images.githubusercontent.com/39220694/189849436-2a454724-715a-408f-8139-870fb3de6955.png)
 
+![image](https://user-images.githubusercontent.com/39220694/189851195-7b0161c7-1561-4e52-81e1-2710eda1e81a.png)
+![image](https://user-images.githubusercontent.com/39220694/189851696-85c2b19c-edc7-4957-83b8-4b4ddfce50a9.png)
+![image](https://user-images.githubusercontent.com/39220694/189853031-a441041d-3b02-43c6-b8a4-ca06c028e8a5.png)
+отключать если первичные ключи - паспортные данные
+
 #Создание базы данных
 Создание скрипта
 1. Создать бд
