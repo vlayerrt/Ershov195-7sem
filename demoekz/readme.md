@@ -69,7 +69,9 @@ ER - entity relationship - сущность и связь <br>
 </table>
 
 2НФ укорачиваем повротяющиеся элементы<br>
-3НФ взаимосвязи столбцов. если не зависят - выносим в разные таблицы
+3НФ взаимосвязи столбцов. если не зависят - выносим в разные таблицы<br>
+![image](https://user-images.githubusercontent.com/39220694/189847462-101a36f8-33bf-4a1a-8f04-38f7742343b2.png)
+
 ## программные решения для бизнеса esat
 https://esat.worldskills.ru/competencies/dac59f20-134b-4aa4-94e5-518c488ccc9e/categories/d747aed4-5204-4ab4-a3f1-dec61f99735d
 ## подготовка
