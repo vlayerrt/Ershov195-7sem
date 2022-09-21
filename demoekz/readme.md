@@ -117,6 +117,10 @@ ER - entity relationship - сущность и связь <br>
 Парментры элементов, изменающие их внешний вид<br>
 Название выравнивание позиционирование отступы<br>
 
+## Шаблоны
+![image](https://user-images.githubusercontent.com/39220694/191474579-2fbc348f-8fa6-4c87-a4ef-a3c9c746260a.png)
+
+
 
 ## программные решения для бизнеса esat
 https://esat.worldskills.ru/competencies/dac59f20-134b-4aa4-94e5-518c488ccc9e/categories/d747aed4-5204-4ab4-a3f1-dec61f99735d
