@@ -100,6 +100,22 @@ ER - entity relationship - сущность и связь <br>
 
 ![image](https://user-images.githubusercontent.com/39220694/189868313-2bd24f35-e698-412c-a163-1ef57b39e9b0.png)
 
+# WPF
+Один из коспонентов ядра NET Framework - WinForms - UWP
+отличаетя от WinForms <br>
+Адаптивной версткой <br>
+Привязкой данных <br>
+стили <br>
+Настройка анимаций <br>
+Использовать NET Framework<br>
+Осовные контейнеры: Grid, StackPanel - расположение в порядке по вертикали и горизонтали, Canvas. WrapPanel - распологает все элементы в одной строке или колонке 
+Строка - RowDefenition<br>
+Столбец - ColumnDefenition<br>
+![image](https://user-images.githubusercontent.com/39220694/191467415-5d7266ee-1d5c-4193-8cdf-6c3321023a03.png)
+
+## Свойства
+Парментры элементов, изменающие их внешний вид<br>
+Название выравнивание позиционирование отступы<br>
 
 
 ## программные решения для бизнеса esat
