@@ -150,3 +150,6 @@ https://docs.google.com/document/d/17dkgRFIxEAdOvFsUuCD5TGeWHCqcC7U-Ha5MJ0EfdtI/
 ```
 локальный гит http://192.168.1.20:3000/
 задания: https://github.com/Julia-Zhirnova/Demoekzamen
+
+![image](https://user-images.githubusercontent.com/39220694/192772912-716a56cd-172c-494b-9d02-0c4ca8b65042.png)
+
