@@ -121,6 +121,13 @@ ER - entity relationship - сущность и связь <br>
 ![image](https://user-images.githubusercontent.com/39220694/191474579-2fbc348f-8fa6-4c87-a4ef-a3c9c746260a.png)
 
 
+# Подготовка данных
+![image](https://user-images.githubusercontent.com/39220694/195324925-933c83f3-9fe7-4bc7-94b2-95ee77a17f92.png)
+ВПР позволяет заменить значения на цифры
+Для ВПР номер пишется справа
+Делается все в новом файле
+![image](https://user-images.githubusercontent.com/39220694/195331560-329011fa-34a1-4655-a3a7-b873bf58e28a.png)
+
 
 ## программные решения для бизнеса esat
 https://esat.worldskills.ru/competencies/dac59f20-134b-4aa4-94e5-518c488ccc9e/categories/d747aed4-5204-4ab4-a3f1-dec61f99735d
