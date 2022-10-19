@@ -141,6 +141,9 @@ https://docs.google.com/document/d/17dkgRFIxEAdOvFsUuCD5TGeWHCqcC7U-Ha5MJ0EfdtI/
 <br>
 в команде remote прописать ip адрес вместо localhost
 ![image](https://user-images.githubusercontent.com/39220694/196677678-ee6ab2d6-0376-4cc0-9c3f-007a657f14e9.png)
+# Подключение DB
+![image](https://user-images.githubusercontent.com/39220694/196682697-0172dfbe-a8e0-4ec9-a392-26f2d87d769b.png)
+![image](https://user-images.githubusercontent.com/39220694/196684087-862ae065-9939-47c9-9795-8bc1342f03a1.png)
 
 
 
