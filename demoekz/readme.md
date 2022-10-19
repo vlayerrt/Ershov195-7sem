@@ -134,6 +134,16 @@ https://esat.worldskills.ru/competencies/dac59f20-134b-4aa4-94e5-518c488ccc9e/ca
 ## подготовка
 https://docs.google.com/document/d/17dkgRFIxEAdOvFsUuCD5TGeWHCqcC7U-Ha5MJ0EfdtI/edit#
 ![image](https://user-images.githubusercontent.com/39220694/188390968-a3e0d586-5bc2-4793-aa07-3dcd178ebf63.png)
+
+![image](https://user-images.githubusercontent.com/39220694/196673439-0fc57c4b-f95e-48ac-a554-c3bb0552039d.png)
+![image](https://user-images.githubusercontent.com/39220694/196673984-9b82b695-10ea-48c8-a488-d88fd4c0955c.png)
+![image](https://user-images.githubusercontent.com/39220694/196677362-722b8d45-51c0-4df1-b946-c3afc4ad181d.png)
+<br>
+в команде remote прописать ip адрес вместо localhost
+![image](https://user-images.githubusercontent.com/39220694/196677678-ee6ab2d6-0376-4cc0-9c3f-007a657f14e9.png)
+
+
+
 ```
 Модуль 1: Анализ и проектирование требований, бизнеспроцессов - UML-диаграммы
 Модуль 2: Проектирование реляционного хранилища данных - ER-модель БД
