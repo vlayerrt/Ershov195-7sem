@@ -9,4 +9,4 @@ $ git pull origin main
 ![image](https://user-images.githubusercontent.com/39220694/197711728-fb47b826-6752-4eed-8ddb-6eb7a207fbeb.png)
 
 # Турагенство
-![image](https://user-images.githubusercontent.com/39220694/197469983-ec2c7d9c-e5bd-4383-a4b7-221592494093.png)
+![image](https://user-images.githubusercontent.com/39220694/197711912-f56a1115-5c1c-4bd0-99a9-fc7b06725abf.png)
