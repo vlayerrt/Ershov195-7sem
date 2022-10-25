@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="00fd4454deac4d39b0b9a5b55145b44c" Name="Diagram1">
+        <EntityTypeShape EntityType="EV_BlagodatModel.Clients" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EV_BlagodatModel.Employers_" Width="1.5" PointX="8" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="EV_BlagodatModel.LoginLog" Width="1.5" PointX="5.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EV_BlagodatModel.Orders" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EV_BlagodatModel.Services_" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="EV_BlagodatModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EV_BlagodatModel.Types" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EV_BlagodatModel.Users" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EV_BlagodatModel.Barcodes" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EV_BlagodatModel.Materials" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="EV_BlagodatModel.FK_Orders_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="EV_BlagodatModel.FK_Employers__LoginLog" ManuallyRouted="false" />
+        <AssociationConnector Association="EV_BlagodatModel.FK_Barcodes_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="EV_BlagodatModel.FK_Users_Types" ManuallyRouted="false" />
+        <AssociationConnector Association="EV_BlagodatModel.ServicesOrder" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
