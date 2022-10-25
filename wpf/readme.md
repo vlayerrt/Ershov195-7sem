@@ -6,4 +6,7 @@ $ git pull origin main
 ![image](https://user-images.githubusercontent.com/39220694/194815984-b9a51734-e877-4734-ae95-83e421ae8580.png)
 
 # Прокат Благодать
+![image](https://user-images.githubusercontent.com/39220694/197711728-fb47b826-6752-4eed-8ddb-6eb7a207fbeb.png)
+
+# Турагенство
 ![image](https://user-images.githubusercontent.com/39220694/197469983-ec2c7d9c-e5bd-4383-a4b7-221592494093.png)
