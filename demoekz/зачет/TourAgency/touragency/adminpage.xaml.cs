@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,10 +25,22 @@ namespace TourAgencyErshov
 
         DispatcherTimer timer = new DispatcherTimer();
         DateTime date = new DateTime(0, 0);
+
+
+
         public adminpage()
         {
             InitializeComponent();
-            var fullFilePath = Staff.Photo;
+            App.modeldb = new TourAgencyEVEntities();
+
+
+            UserTB.Text = TourAgencyEVEntities.CurrentUser.Name;
+            
+
+
+            //RoleTB.Text = "(" + App.Staffss.Role.RoleName + ")";
+
+          /*  var fullFilePath = App.modeldb.CurentStaff.Photo;
 
             BitmapImage bitmap = new BitmapImage();
             bitmap.BeginInit();
@@ -36,7 +48,7 @@ namespace TourAgencyErshov
             bitmap.EndInit();
 
             UserPhoto.Source = bitmap;
-
+*/
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += timerTick;
             timer.Start();
@@ -45,11 +57,11 @@ namespace TourAgencyErshov
         {
             date = date.AddSeconds(1);
             lblTimer.Content = date.ToString("HH:mm:ss");
-            if (lblTimer.Content == "00:05:00")
+            if (lblTimer.Content == "00:00:05")
             {
                 MessageBox.Show("Время сеанса подходит к концу!", "Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
-            if (lblTimer.Content == "00:10:00")
+            if (lblTimer.Content == "00:00:10")
             {
                 timer.Stop();
             }
