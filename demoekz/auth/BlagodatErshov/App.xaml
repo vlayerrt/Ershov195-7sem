@@ -1,0 +1,17 @@
+﻿<Application x:Class="BlagodatErshov.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BlagodatErshov"
+             StartupUri="BlagoiBlago.xaml">
+    <Application.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="0 0 0 15"/>
+            <Setter Property="Background" Value="#FF498C51"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+        </Style>
+         
+    </Application.Resources>
+</Application>
