@@ -21,3 +21,9 @@
 ![image](https://user-images.githubusercontent.com/39220694/207182687-13d8fe36-6f95-49d1-b233-eaa1c65c8b11.png)
 ![image](https://user-images.githubusercontent.com/39220694/207182701-da9f954e-70ff-43c8-bb36-1831bbb4b42e.png)
 
+# Данные через ListView
+![image](https://user-images.githubusercontent.com/39220694/207442076-d6ba1bca-3458-4a62-88cd-bf7aac0e6dcc.png)
+
+
+# Поиск и фильтрация
+![image](https://user-images.githubusercontent.com/39220694/207441963-67c866cb-b752-4299-9d01-7158f8aa3041.png)
