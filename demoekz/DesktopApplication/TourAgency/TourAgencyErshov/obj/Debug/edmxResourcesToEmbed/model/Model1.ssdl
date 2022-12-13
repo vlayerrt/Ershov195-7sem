@@ -5,7 +5,7 @@
       <PropertyRef Name="CountryCode" />
     </Key>
     <Property Name="CountryName" Type="nvarchar" MaxLength="255" />
-    <Property Name="CountryCode" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="CountryCode" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="Hotels">
     <Key>
@@ -15,7 +15,7 @@
     <Property Name="HotelName" Type="nvarchar" MaxLength="255" />
     <Property Name="Stars" Type="int" />
     <Property Name="CountryName" Type="nvarchar" MaxLength="255" />
-    <Property Name="CountryCode" Type="nchar" MaxLength="10" />
+    <Property Name="CountryCode" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Roles">
     <Key>
@@ -51,7 +51,8 @@
     </Key>
     <Property Name="TourID" Type="int" Nullable="false" />
     <Property Name="TourName" Type="nvarchar" MaxLength="50" />
-    <Property Name="CountryCode" Type="nchar" MaxLength="10" />
+    <Property Name="CountryCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="ImagePreview" Type="nvarchar(max)" />
     <Property Name="TicketsCount" Type="int" />
     <Property Name="Cost" Type="money" />
     <Property Name="IsActual" Type="int" />
@@ -61,7 +62,7 @@
     <Key>
       <PropertyRef Name="TourTypeID" />
     </Key>
-    <Property Name="TourTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TourTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="TourType" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="Users">

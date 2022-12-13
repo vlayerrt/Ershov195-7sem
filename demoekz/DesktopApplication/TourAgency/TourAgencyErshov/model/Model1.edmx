@@ -4,13 +4,13 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище TourAgencyEVModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище TourAgencyEVModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Countries">
           <Key>
             <PropertyRef Name="CountryCode" />
           </Key>
           <Property Name="CountryName" Type="nvarchar" MaxLength="255" />
-          <Property Name="CountryCode" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="CountryCode" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Hotels">
           <Key>
@@ -20,7 +20,7 @@
           <Property Name="HotelName" Type="nvarchar" MaxLength="255" />
           <Property Name="Stars" Type="int" />
           <Property Name="CountryName" Type="nvarchar" MaxLength="255" />
-          <Property Name="CountryCode" Type="nchar" MaxLength="10" />
+          <Property Name="CountryCode" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Roles">
           <Key>
@@ -56,7 +56,8 @@
           </Key>
           <Property Name="TourID" Type="int" Nullable="false" />
           <Property Name="TourName" Type="nvarchar" MaxLength="50" />
-          <Property Name="CountryCode" Type="nchar" MaxLength="10" />
+          <Property Name="CountryCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="ImagePreview" Type="nvarchar(max)" />
           <Property Name="TicketsCount" Type="int" />
           <Property Name="Cost" Type="money" />
           <Property Name="IsActual" Type="int" />
@@ -66,7 +67,7 @@
           <Key>
             <PropertyRef Name="TourTypeID" />
           </Key>
-          <Property Name="TourTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TourTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="TourType" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Users">
@@ -184,8 +185,7 @@
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="TourAgencyEVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -194,7 +194,7 @@
             <PropertyRef Name="CountryCode" />
           </Key>
           <Property Name="CountryName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="CountryCode" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="CountryCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Hotels" Relationship="Self.FK_Hotels_Countries" FromRole="Countries" ToRole="Hotels" />
           <NavigationProperty Name="Tours" Relationship="Self.FK_Tour_Countries" FromRole="Countries" ToRole="Tour" />
         </EntityType>
@@ -206,7 +206,7 @@
           <Property Name="HotelName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Stars" Type="Int32" />
           <Property Name="CountryName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="CountryCode" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="CountryCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Country" Relationship="Self.FK_Hotels_Countries" FromRole="Hotels" ToRole="Countries" />
         </EntityType>
         <EntityType Name="Role">
@@ -247,13 +247,14 @@
           </Key>
           <Property Name="TourID" Type="Int32" Nullable="false" />
           <Property Name="TourName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CountryCode" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="CountryCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="TicketsCount" Type="Int32" />
           <Property Name="Cost" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="IsActual" Type="Int32" />
           <Property Name="TourTypeID" Type="Int32" />
           <NavigationProperty Name="Country" Relationship="Self.FK_Tour_Countries" FromRole="Tour" ToRole="Countries" />
           <NavigationProperty Name="TourType" Relationship="Self.FK_Tour_TourType" FromRole="Tour" ToRole="TourType" />
+          <Property Name="ImagePreview" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="TourType">
           <Key>
@@ -439,6 +440,7 @@
           <EntitySetMapping Name="Tours">
             <EntityTypeMapping TypeName="TourAgencyEVModel.Tour">
               <MappingFragment StoreEntitySet="Tour">
+                <ScalarProperty Name="ImagePreview" ColumnName="ImagePreview" />
                 <ScalarProperty Name="TourID" ColumnName="TourID" />
                 <ScalarProperty Name="TourName" ColumnName="TourName" />
                 <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />

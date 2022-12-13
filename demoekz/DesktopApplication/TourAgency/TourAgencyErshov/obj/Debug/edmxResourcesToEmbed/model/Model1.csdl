@@ -5,7 +5,7 @@
       <PropertyRef Name="CountryCode" />
     </Key>
     <Property Name="CountryName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="CountryCode" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="CountryCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Hotels" Relationship="Self.FK_Hotels_Countries" FromRole="Countries" ToRole="Hotels" />
     <NavigationProperty Name="Tours" Relationship="Self.FK_Tour_Countries" FromRole="Countries" ToRole="Tour" />
   </EntityType>
@@ -17,7 +17,7 @@
     <Property Name="HotelName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="Stars" Type="Int32" />
     <Property Name="CountryName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="CountryCode" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="CountryCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Country" Relationship="Self.FK_Hotels_Countries" FromRole="Hotels" ToRole="Countries" />
   </EntityType>
   <EntityType Name="Role">
@@ -58,13 +58,14 @@
     </Key>
     <Property Name="TourID" Type="Int32" Nullable="false" />
     <Property Name="TourName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="CountryCode" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="CountryCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="TicketsCount" Type="Int32" />
     <Property Name="Cost" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="IsActual" Type="Int32" />
     <Property Name="TourTypeID" Type="Int32" />
     <NavigationProperty Name="Country" Relationship="Self.FK_Tour_Countries" FromRole="Tour" ToRole="Countries" />
     <NavigationProperty Name="TourType" Relationship="Self.FK_Tour_TourType" FromRole="Tour" ToRole="TourType" />
+    <Property Name="ImagePreview" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="TourType">
     <Key>

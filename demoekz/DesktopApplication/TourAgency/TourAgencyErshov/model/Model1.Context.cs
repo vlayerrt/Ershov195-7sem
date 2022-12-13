@@ -18,7 +18,7 @@ namespace TourAgencyErshov.model
         private static TourAgencyEVEntities _context;
 
         public TourAgencyEVEntities()
-            : base("name=TourAgencyEVEntities")
+        : base("name=TourAgencyEVEntities")
         {
         }
         public static TourAgencyEVEntities GetContext()
@@ -27,7 +27,6 @@ namespace TourAgencyErshov.model
                 _context = new TourAgencyEVEntities();
             return _context;
         }
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

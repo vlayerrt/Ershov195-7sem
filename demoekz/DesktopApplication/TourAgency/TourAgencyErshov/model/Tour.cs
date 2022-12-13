@@ -21,6 +21,7 @@ namespace TourAgencyErshov.model
         public Nullable<decimal> Cost { get; set; }
         public Nullable<int> IsActual { get; set; }
         public Nullable<int> TourTypeID { get; set; }
+        public string ImagePreview { get; set; }
     
         public virtual Country Country { get; set; }
         public virtual TourType TourType { get; set; }

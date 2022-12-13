@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\demoekz",
+    "\\demoekz\\DesktopApplication",
+    "\\demoekz\\DesktopApplication\\TourAgency"
   ],
-  "SelectedNode": "\\ToursAgencyEV195.sln",
+  "SelectedNode": "\\demoekz\\DesktopApplication\\TourAgency\\readme.md",
   "PreviewInSolutionExplorer": false
 }

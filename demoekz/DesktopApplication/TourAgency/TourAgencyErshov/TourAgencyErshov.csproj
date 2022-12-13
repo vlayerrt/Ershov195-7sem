@@ -47,6 +47,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
@@ -80,6 +81,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="loginpage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ToursPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -146,6 +151,9 @@
     </Compile>
     <Compile Include="model\User.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToursPage.xaml.cs">
+      <DependentUpon>ToursPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="userpage.xaml.cs">
       <DependentUpon>userpage.xaml</DependentUpon>
@@ -223,6 +231,35 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="ToursPhoto\Болгарское наследие.png" />
+    <Resource Include="ToursPhoto\Волшебный Восток.png" />
+    <Resource Include="ToursPhoto\Город с большими амбициями.png" />
+    <Resource Include="ToursPhoto\Город четырех ворот.png" />
+    <Resource Include="ToursPhoto\Горячий отдых зимой и летом.png" />
+    <Resource Include="ToursPhoto\Древний Минск.png" />
+    <Resource Include="ToursPhoto\Жемчужина Татарстана.png" />
+    <Resource Include="ToursPhoto\Знакомьтесь. Амстердам%27.png" />
+    <Resource Include="ToursPhoto\Из Алании к загадочным пещерам Алтынбешик.png" />
+    <Resource Include="ToursPhoto\Многоликий Сувон.png" />
+    <Resource Include="ToursPhoto\Москва поэтическая.png" />
+    <Resource Include="ToursPhoto\Незабываемый Дели.png" />
+    <Resource Include="ToursPhoto\Отдых на райском острове.png" />
+    <Resource Include="ToursPhoto\По старому Таллину.png" />
+    <Resource Include="ToursPhoto\Прекрасные острова Греции.png" />
+    <Resource Include="ToursPhoto\Романтика белых ночей и разводных мостов.png" />
+    <Resource Include="ToursPhoto\Свидание с Хельсинки.png" />
+    <Resource Include="ToursPhoto\Сердце Ирана.png" />
+    <Resource Include="ToursPhoto\Сердце Северной Карелии.png" />
+    <Resource Include="ToursPhoto\Старый город.png" />
+    <Resource Include="ToursPhoto\Столица страны Утренней Свежести.png" />
+    <Resource Include="ToursPhoto\Страна идеальной гармонии.png" />
+    <Resource Include="ToursPhoto\Страна удивительных контрастов.png" />
+    <Resource Include="ToursPhoto\Урбанистическая Бразилия.png" />
+    <Resource Include="ToursPhoto\Финская крепость.png" />
+    <Resource Include="ToursPhoto\Финский романтизм.png" />
+    <None Include="Resources\logo.ico" />
+    <None Include="Resources\logo.png" />
+    <Resource Include="Resources\picture.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

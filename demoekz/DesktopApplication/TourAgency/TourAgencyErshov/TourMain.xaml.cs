@@ -23,7 +23,7 @@ namespace TourAgencyErshov
         public TourMain()
         {
             InitializeComponent();
-            FrameMain.Navigate(new loginpage());
+            FrameMain.Navigate(new ToursPage());
             Manager.MainFrame = FrameMain;
 
 

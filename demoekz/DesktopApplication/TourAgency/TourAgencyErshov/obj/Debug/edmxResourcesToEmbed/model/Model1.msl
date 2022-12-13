@@ -54,6 +54,7 @@
     <EntitySetMapping Name="Tours">
       <EntityTypeMapping TypeName="TourAgencyEVModel.Tour">
         <MappingFragment StoreEntitySet="Tour">
+          <ScalarProperty Name="ImagePreview" ColumnName="ImagePreview" />
           <ScalarProperty Name="TourID" ColumnName="TourID" />
           <ScalarProperty Name="TourName" ColumnName="TourName" />
           <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
