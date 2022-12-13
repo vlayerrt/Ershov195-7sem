@@ -45,7 +45,7 @@ namespace TourAgencyErshov
             var currentTours = model.TourAgencyEVEntities.GetContext().Tours.ToList();
 
            //if (ComboType.SelectedIndex > 0)
-                //currentTours = currentTours.Where(p => p.TourTypeID.Contains(ComboType.SelectedItem as model.TourType)).ToList();
+                //currentTours = currentTours.Where(p => p.TourType.Contains(ComboType.SelectedItem as model.TourType)).ToList();
 
             currentTours = currentTours.Where(p => p.TourName.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
 
