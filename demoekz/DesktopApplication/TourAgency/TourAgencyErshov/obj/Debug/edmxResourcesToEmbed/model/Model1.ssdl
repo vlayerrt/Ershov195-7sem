@@ -63,7 +63,7 @@
       <PropertyRef Name="TourTypeID" />
     </Key>
     <Property Name="TourTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="TourType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TourTypeName" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="Users">
     <Key>

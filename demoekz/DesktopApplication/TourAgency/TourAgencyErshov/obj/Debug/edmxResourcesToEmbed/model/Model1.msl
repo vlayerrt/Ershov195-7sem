@@ -68,8 +68,8 @@
     <EntitySetMapping Name="TourTypes">
       <EntityTypeMapping TypeName="TourAgencyEVModel.TourType">
         <MappingFragment StoreEntitySet="TourType">
+          <ScalarProperty Name="TourTypeName" ColumnName="TourTypeName" />
           <ScalarProperty Name="TourTypeID" ColumnName="TourTypeID" />
-          <ScalarProperty Name="TourType1" ColumnName="TourType" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

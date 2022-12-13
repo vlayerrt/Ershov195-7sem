@@ -72,8 +72,8 @@
       <PropertyRef Name="TourTypeID" />
     </Key>
     <Property Name="TourTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="TourType1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Tours" Relationship="Self.FK_Tour_TourType" FromRole="TourType" ToRole="Tour" />
+    <Property Name="TourTypeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="User">
     <Key>

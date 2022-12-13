@@ -21,7 +21,7 @@ namespace TourAgencyErshov.model
         }
     
         public int TourTypeID { get; set; }
-        public string TourType1 { get; set; }
+        public string TourTypeName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tour> Tours { get; set; }

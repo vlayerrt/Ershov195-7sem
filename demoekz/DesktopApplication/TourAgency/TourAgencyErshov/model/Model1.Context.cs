@@ -27,6 +27,7 @@ namespace TourAgencyErshov.model
                 _context = new TourAgencyEVEntities();
             return _context;
         }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
@@ -40,7 +41,6 @@ namespace TourAgencyErshov.model
         public virtual DbSet<Tour> Tours { get; set; }
         public virtual DbSet<TourType> TourTypes { get; set; }
         public virtual DbSet<User> Users { get; set; }
-
         public static User CurrentUser = null;
     }
 }

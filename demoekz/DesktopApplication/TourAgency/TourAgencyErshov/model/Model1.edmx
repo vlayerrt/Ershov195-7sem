@@ -68,7 +68,7 @@
             <PropertyRef Name="TourTypeID" />
           </Key>
           <Property Name="TourTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="TourType" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TourTypeName" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
@@ -261,8 +261,8 @@
             <PropertyRef Name="TourTypeID" />
           </Key>
           <Property Name="TourTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TourType1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Tours" Relationship="Self.FK_Tour_TourType" FromRole="TourType" ToRole="Tour" />
+          <Property Name="TourTypeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -454,8 +454,8 @@
           <EntitySetMapping Name="TourTypes">
             <EntityTypeMapping TypeName="TourAgencyEVModel.TourType">
               <MappingFragment StoreEntitySet="TourType">
+                <ScalarProperty Name="TourTypeName" ColumnName="TourTypeName" />
                 <ScalarProperty Name="TourTypeID" ColumnName="TourTypeID" />
-                <ScalarProperty Name="TourType1" ColumnName="TourType" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

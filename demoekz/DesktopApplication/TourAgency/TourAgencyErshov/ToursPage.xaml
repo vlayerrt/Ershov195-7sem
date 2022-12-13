@@ -13,6 +13,22 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
+        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Введите запрос: " Width="175" TextAlignment="Right"></TextBlock>
+                <TextBox Width="225" Name="TBoxSearch" TextChanged="TBoxSearch_TextChanged"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Выберите тип: " Width="175" TextAlignment="Right"></TextBlock>
+                <ComboBox Width="225" Name="ComboType" SelectionChanged="ComboType_SelectionChanged"
+                          DisplayMemberPath="TourTypeName">
+                </ComboBox>
+                
+            </StackPanel>
+            <CheckBox x:Name="CheckActual" Content="Показать только актуальные туры: " HorizontalAlignment="Center" Checked="CheckActual_Checked" Unchecked="CheckActual_Unchecked"></CheckBox>
+            
+        </WrapPanel>
         <ListView Grid.Row="1" Name="LVTours" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                   HorizontalContentAlignment="Center">
             <ListView.ItemsPanel>
