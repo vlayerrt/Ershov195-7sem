@@ -118,8 +118,10 @@ namespace Глазки_SaveErshov
             {
                 var userObj = Classes.ConnectDB.modeldb.Users.FirstOrDefault(x =>
                 x.login == TxbLogin.Text && x.password == PsbPassword.Password);
-
+                model.GlazkiSaveEVEntities.currentUser = userObj;
                 if (userObj != null)
+                    
+
                 {
                     if (GetCaptcha.Text == symbols)
                     {
