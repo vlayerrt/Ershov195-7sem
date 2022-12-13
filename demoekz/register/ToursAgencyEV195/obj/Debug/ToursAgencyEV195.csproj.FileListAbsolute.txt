@@ -9,3 +9,14 @@ D:\collegeboy\7semUP\registration,hash\ToursAgencyEV195\obj\Debug\ToursAgencyEV1
 D:\collegeboy\7semUP\registration,hash\ToursAgencyEV195\obj\Debug\ToursAgencyEV195.csproj.CoreCompileInputs.cache
 D:\collegeboy\7semUP\registration,hash\ToursAgencyEV195\obj\Debug\ToursAgencyEV195.exe
 D:\collegeboy\7semUP\registration,hash\ToursAgencyEV195\obj\Debug\ToursAgencyEV195.pdb
+D:\GitVisual\Ershov195-7sem\demoekz\register\ToursAgencyEV195\bin\Debug\ToursAgencyEV195.exe.config
+D:\GitVisual\Ershov195-7sem\demoekz\register\ToursAgencyEV195\bin\Debug\ToursAgencyEV195.exe
+D:\GitVisual\Ershov195-7sem\demoekz\register\ToursAgencyEV195\bin\Debug\ToursAgencyEV195.pdb
+D:\GitVisual\Ershov195-7sem\demoekz\register\ToursAgencyEV195\obj\Debug\ToursAgencyEV195.csproj.AssemblyReference.cache
+D:\GitVisual\Ershov195-7sem\demoekz\register\ToursAgencyEV195\obj\Debug\ToursAgencyEV195.Form1.resources
+D:\GitVisual\Ershov195-7sem\demoekz\register\ToursAgencyEV195\obj\Debug\ToursAgencyEV195.Properties.Resources.resources
+D:\GitVisual\Ershov195-7sem\demoekz\register\ToursAgencyEV195\obj\Debug\ToursAgencyEV195.sign_up.resources
+D:\GitVisual\Ershov195-7sem\demoekz\register\ToursAgencyEV195\obj\Debug\ToursAgencyEV195.csproj.GenerateResource.cache
+D:\GitVisual\Ershov195-7sem\demoekz\register\ToursAgencyEV195\obj\Debug\ToursAgencyEV195.csproj.CoreCompileInputs.cache
+D:\GitVisual\Ershov195-7sem\demoekz\register\ToursAgencyEV195\obj\Debug\ToursAgencyEV195.exe
+D:\GitVisual\Ershov195-7sem\demoekz\register\ToursAgencyEV195\obj\Debug\ToursAgencyEV195.pdb

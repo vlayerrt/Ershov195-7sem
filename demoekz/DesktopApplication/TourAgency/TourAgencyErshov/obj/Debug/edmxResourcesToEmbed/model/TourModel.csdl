@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TourAgencyEVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="TourAgencyEVEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Countries" EntityType="TourAgencyEVModel.Country" />
+    <EntitySet Name="Hotels" EntityType="TourAgencyEVModel.Hotel" />
+    <EntitySet Name="Roles" EntityType="TourAgencyEVModel.Role" />
+    <EntitySet Name="Staffs" EntityType="TourAgencyEVModel.Staff" />
+    <EntitySet Name="sysdiagrams" EntityType="TourAgencyEVModel.sysdiagram" />
+    <EntitySet Name="Tours" EntityType="TourAgencyEVModel.Tour" />
+    <EntitySet Name="TourTypes" EntityType="TourAgencyEVModel.TourType" />
+    <EntitySet Name="Users" EntityType="TourAgencyEVModel.User" />
+    <AssociationSet Name="FK_Hotels_Countries" Association="TourAgencyEVModel.FK_Hotels_Countries">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="Hotel" EntitySet="Hotels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tour_Countries" Association="TourAgencyEVModel.FK_Tour_Countries">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="Tour" EntitySet="Tours" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Staff_Roles" Association="TourAgencyEVModel.FK_Staff_Roles">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="Staff" EntitySet="Staffs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Roles" Association="TourAgencyEVModel.FK_Users_Roles">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Staff" Association="TourAgencyEVModel.FK_Users_Staff">
+      <End Role="Staff" EntitySet="Staffs" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tour_TourType" Association="TourAgencyEVModel.FK_Tour_TourType">
+      <End Role="TourType" EntitySet="TourTypes" />
+      <End Role="Tour" EntitySet="Tours" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="CountryCode" />
+    </Key>
+    <Property Name="CountryName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CountryCode" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Hotels" Relationship="TourAgencyEVModel.FK_Hotels_Countries" FromRole="Country" ToRole="Hotel" />
+    <NavigationProperty Name="Tours" Relationship="TourAgencyEVModel.FK_Tour_Countries" FromRole="Country" ToRole="Tour" />
+  </EntityType>
+  <EntityType Name="Hotel">
+    <Key>
+      <PropertyRef Name="HotelID" />
+    </Key>
+    <Property Name="HotelID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HotelName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Stars" Type="Int32" />
+    <Property Name="CountryName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CountryCode" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Country" Relationship="TourAgencyEVModel.FK_Hotels_Countries" FromRole="Hotel" ToRole="Country" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Staffs" Relationship="TourAgencyEVModel.FK_Staff_Roles" FromRole="Role" ToRole="Staff" />
+    <NavigationProperty Name="Users" Relationship="TourAgencyEVModel.FK_Users_Roles" FromRole="Role" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Staff">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="Photo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Surname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Patronymic" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RoleID" Type="Int32" />
+    <NavigationProperty Name="Role" Relationship="TourAgencyEVModel.FK_Staff_Roles" FromRole="Staff" ToRole="Role" />
+    <NavigationProperty Name="Users" Relationship="TourAgencyEVModel.FK_Users_Staff" FromRole="Staff" ToRole="User" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Tour">
+    <Key>
+      <PropertyRef Name="TourID" />
+    </Key>
+    <Property Name="TourID" Type="Int32" Nullable="false" />
+    <Property Name="TourName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CountryCode" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="TicketsCount" Type="Int32" />
+    <Property Name="Cost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="IsActual" Type="Int32" />
+    <Property Name="TourTypeID" Type="Int32" />
+    <NavigationProperty Name="Country" Relationship="TourAgencyEVModel.FK_Tour_Countries" FromRole="Tour" ToRole="Country" />
+    <NavigationProperty Name="TourType" Relationship="TourAgencyEVModel.FK_Tour_TourType" FromRole="Tour" ToRole="TourType" />
+  </EntityType>
+  <EntityType Name="TourType">
+    <Key>
+      <PropertyRef Name="TourTypeID" />
+    </Key>
+    <Property Name="TourTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TourType1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Tours" Relationship="TourAgencyEVModel.FK_Tour_TourType" FromRole="TourType" ToRole="Tour" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="login" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="login" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Role" Relationship="TourAgencyEVModel.FK_Users_Roles" FromRole="User" ToRole="Role" />
+    <NavigationProperty Name="Staff" Relationship="TourAgencyEVModel.FK_Users_Staff" FromRole="User" ToRole="Staff" />
+  </EntityType>
+  <Association Name="FK_Hotels_Countries">
+    <End Type="TourAgencyEVModel.Country" Role="Country" Multiplicity="0..1" />
+    <End Type="TourAgencyEVModel.Hotel" Role="Hotel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryCode" />
+      </Principal>
+      <Dependent Role="Hotel">
+        <PropertyRef Name="CountryCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tour_Countries">
+    <End Type="TourAgencyEVModel.Country" Role="Country" Multiplicity="0..1" />
+    <End Type="TourAgencyEVModel.Tour" Role="Tour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryCode" />
+      </Principal>
+      <Dependent Role="Tour">
+        <PropertyRef Name="CountryCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Staff_Roles">
+    <End Type="TourAgencyEVModel.Role" Role="Role" Multiplicity="0..1" />
+    <End Type="TourAgencyEVModel.Staff" Role="Staff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="Staff">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Roles">
+    <End Type="TourAgencyEVModel.Role" Role="Role" Multiplicity="1" />
+    <End Type="TourAgencyEVModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Staff">
+    <End Type="TourAgencyEVModel.Staff" Role="Staff" Multiplicity="1" />
+    <End Type="TourAgencyEVModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Staff">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tour_TourType">
+    <End Type="TourAgencyEVModel.TourType" Role="TourType" Multiplicity="0..1" />
+    <End Type="TourAgencyEVModel.Tour" Role="Tour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TourType">
+        <PropertyRef Name="TourTypeID" />
+      </Principal>
+      <Dependent Role="Tour">
+        <PropertyRef Name="TourTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
