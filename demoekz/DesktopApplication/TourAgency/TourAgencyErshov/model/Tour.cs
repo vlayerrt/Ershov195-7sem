@@ -20,6 +20,23 @@ namespace TourAgencyErshov.model
         public Nullable<int> TicketsCount { get; set; }
         public Nullable<decimal> Cost { get; set; }
         public Nullable<int> IsActual { get; set; }
+        public bool IsActualBool 
+        {
+           get
+            {
+                if (IsActual == 1) return true;
+                else return false;
+            }
+        }
+        
+        public string ActualText
+        {
+            
+            get
+            {
+                return (IsActualBool) ? "Актуален" : "Завершен";
+            }
+        }
         public Nullable<int> TourTypeID { get; set; }
         public string ImagePreview { get; set; }
     
