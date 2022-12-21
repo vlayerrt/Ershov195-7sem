@@ -32,17 +32,14 @@ namespace TourAgencyErshov
 
         }
         string symbol = "";
-        int att = 0;
         public string Symbols;
         private void UpdateCaptcha()
         {
             SPanelSymbols.Children.Clear();
             CanvasNoise.Children.Clear();
 
-
             symbol = "";
-            GenerateSymbols(5);
-            GenerateNoise(2);
+            GenerateSymbols(3);
         }
         private void GenerateSymbols(int count)
         {
@@ -53,18 +50,17 @@ namespace TourAgencyErshov
                 TextBlock lbl = new TextBlock();
 
                 lbl.Text = symbols;
-                lbl.FontSize = _random.Next(15, 30);
+                lbl.FontSize = _random.Next(15, 35);
                 lbl.RenderTransform = new RotateTransform(_random.Next(-45, 45));
-                lbl.Margin = new Thickness(5, 0, 5, 0);
+                lbl.Margin = new Thickness(-2, 0, -2, 0);
+
 
                 symbol = symbol + symbols;
 
-
                 SPanelSymbols.Children.Add(lbl);
-                Symbols = Symbols + symbol;
             }
         }
-        private void GenerateNoise(int volumeNoise)
+        /*private void GenerateNoise(int volumeNoise)
         {
             for (int i = 0; i < volumeNoise; i++)
             {
@@ -97,7 +93,7 @@ namespace TourAgencyErshov
                 Canvas.SetLeft(ellipse, _random.Next(10, 100));
                 Canvas.SetTop(ellipse, _random.Next(10, 26));
             }
-        }
+        }*/
         private void ShowPass_CheckedChanged(object sender, RoutedEventArgs e)
         {
             if (ShowPass.IsChecked == true)
@@ -131,19 +127,28 @@ namespace TourAgencyErshov
                 }
                 else
                 {
-                    switch (currentUser.RoleID)
+                    if (GetCaptcha.Text == symbol)
                     {
-                        case 1:
-                            NavigationService.Navigate(new adminpage());
-                            break;
-                        case 2:
-                            NavigationService.Navigate(new userpage());
-                            break;
-                        default:
-                            MessageBox.Show("Неверные данные", "Уведомление",
-                                MessageBoxButton.OK, MessageBoxImage.Warning);
-                            break;
+                        MessageBox.Show("Здравствуйте " + currentUser.Role.RoleName + ", " + currentUser.login, "Уведомление",
+                            MessageBoxButton.OK, MessageBoxImage.Information);
+                        switch (currentUser.RoleID)
+                        {
+                            case 1:
+                                NavigationService.Navigate(new adminpage());
+                                break;
+                            case 2:
+                                NavigationService.Navigate(new userpage());
+                                break;
+                            default:
+                                MessageBox.Show("Неверные данные", "Уведомление",
+                                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                                break;
+                        }
                     }
+                    else {
+                        MessageBox.Show("Неверная капча", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                        UpdateCaptcha();
+                    };
                 }
             }
             catch (Exception ex)
@@ -153,7 +158,7 @@ namespace TourAgencyErshov
             }
 
         }
-        private void CheckAttemps()
+        /*private void CheckAttemps()
         {
             if (att == 2)
             {
@@ -175,12 +180,12 @@ namespace TourAgencyErshov
             if (att == 3)
             {
                 NavigationService.Navigate(new loginpage());
-            }
+            }*/
 
         }
-        private void Check_Capcha(object sender, RoutedEventArgs e)
+       /* private void Check_Capcha(object sender, RoutedEventArgs e)
         {
             CheckAttemps();
-        }
+        }*/
     }
-}
+

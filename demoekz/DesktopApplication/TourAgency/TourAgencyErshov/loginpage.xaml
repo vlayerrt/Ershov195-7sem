@@ -26,13 +26,12 @@
                 <TextBox x:Name="TBCaptcha" HorizontalAlignment="Right" Width="90"></TextBox>
 
             </StackPanel>
-            <Grid x:Name="CapchaBox" Width="150" Height="100" Visibility="Hidden" >
-
-                <StackPanel Orientation="Horizontal" Name="SPanelSymbols" HorizontalAlignment="Center" VerticalAlignment="Center"></StackPanel>
-                <Canvas Name="CanvasNoise" ></Canvas>
-                <Button x:Name="BtnUpdateCaptcha" Click="BtnUpdateCaptcha_Click" VerticalAlignment="Bottom" Margin="0, 10, 0, 0">Обновить капчу</Button>
+            <Grid Width="150" Height="75" HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal" Name="SPanelSymbols" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Canvas Width="150" Height="75" Name="CanvasNoise" Grid.ColumnSpan="4" Opacity="0.5"/>
             </Grid>
-            <Button x:Name="CapchaLogin" Visibility="Hidden" Click="Check_Capcha">Check Capcha</Button>
+            <Button x:Name="BtnUpdateCaptcha" Click="BtnUpdateCaptcha_Click" VerticalAlignment="Bottom">Обновить капчу</Button>
+            <TextBox x:Name="GetCaptcha"></TextBox>
         </StackPanel>
     </Grid>
 </Page>

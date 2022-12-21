@@ -18,8 +18,8 @@
                 <Image Name="UserPhoto" Height="30" Width="30"/>
             </Border>
 
-            <TextBlock Name="UserTB" Text="Иванов И И" VerticalAlignment="Center" Margin="0,0,16,0" />
-            <TextBlock Name="RoleTB" Text="(Пользователь)" VerticalAlignment="Center"/>
+            <TextBlock Name="UserTB" Text="admin" VerticalAlignment="Center" Margin="0,0,16,0" />
+            <TextBlock Name="RoleTB" Text="(Администратор)" VerticalAlignment="Center"/>
         </StackPanel>
         <TextBlock Grid.Column="1" Name="TimeTB" Text="00:00:00" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="White" Margin="0,0,16,0"/>
     </Grid>

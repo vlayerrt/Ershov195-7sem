@@ -2,9 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\demoekz",
-    "\\demoekz\\DesktopApplication",
-    "\\demoekz\\DesktopApplication\\TourAgency"
+    "\\demoekz\\auth",
+    "\\demoekz\\auth\\BlagodatErshov",
+    "\\demoekz\\DesktopApplication\\TourAgency",
+    "\\demoekz\\DesktopApplication\\TourAgency\\TourAgencyErshov"
   ],
-  "SelectedNode": "\\demoekz\\DesktopApplication\\TourAgency\\readme.md",
+  "SelectedNode": "\\demoekz\\auth\\BlagodatErshov.sln",
   "PreviewInSolutionExplorer": false
 }
