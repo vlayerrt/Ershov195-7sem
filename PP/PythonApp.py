@@ -68,7 +68,7 @@ def draw_car_count(img, count):
 
     img = cv2.putText(img, text, (50, 70), font, font_size, color, width)
     
-    text = 'broccoli Count ' счётчик ,брокколи + str(count) 
+    text = 'broccoli Count ' + str(count) 
     img = cv2.putText(img, text, (50, 140), font, font_size, color, width)
     
     return img
