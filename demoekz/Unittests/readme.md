@@ -6,3 +6,9 @@ NUnit
 reuslt <br>
 ![image](https://user-images.githubusercontent.com/39220694/212879710-2ecdce8d-df09-46f5-8bef-fb535a342bcb.png)
 ![image](https://user-images.githubusercontent.com/39220694/212879774-d9e98f14-c98c-4033-91b4-2509aaf5b90d.png)
+
+
+![image](https://user-images.githubusercontent.com/39220694/212886985-79a3efc8-6adb-4865-80ec-f0cbfde5da3c.png)
+![image](https://user-images.githubusercontent.com/39220694/212887045-a44a1e5f-b8ce-4dfb-995e-40789ae4cf69.png)
+проверить пользователя в панель управления - учетные записи - ![image](https://user-images.githubusercontent.com/39220694/212887121-e1d0e587-2114-4634-b079-ed40a1745344.png)
+<br>
