@@ -12,6 +12,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
         <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
@@ -64,7 +65,17 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+
+            <Button Margin="3" Width="20"  Name="BtnFirstPage" Click="BtnFirstPage_Click" Content="&lt;&lt;"></Button>
+            <Button Margin="3" Width="20" Name="BtnPreviousPage" Click="BtnPreviousPage_Click" Content="&lt;"></Button>
+            <Label Name="LblPages" VerticalAlignment="Center" FontSize="16" Margin="16,10">4/5</Label>
+            <Button Margin="3" Width="20" Name="BtnNextPage" Click="BtnNextPage_Click" Content="&gt;"></Button>
+            <Button Margin="3" Width="20" Name="BtnLastPage" Click="BtnLastPage_Click" Content="&gt;&gt;"></Button>
+        </StackPanel>
+
+        <StackPanel  x:Name="SPanelPages" Orientation="Horizontal" Grid.Row="4" HorizontalAlignment="Center"></StackPanel>
+
     </Grid>
     
 </Page>
