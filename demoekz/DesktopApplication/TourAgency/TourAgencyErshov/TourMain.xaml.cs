@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,13 +36,13 @@ namespace TourAgencyErshov
 
         private void Adm_Click(object sender, RoutedEventArgs e)
         {
-            FrameMain.Navigate(new adminpage());
+            FrameMain.Navigate(new ToursPage());
             Exit_btn.Visibility = Visibility.Visible;
 
         }
         private void Usr_Click(object sender, RoutedEventArgs e)
         {
-            FrameMain.Navigate(new userpage());
+            FrameMain.Navigate(new CodePage());
             Exit_btn.Visibility = Visibility.Visible;
 
         }
