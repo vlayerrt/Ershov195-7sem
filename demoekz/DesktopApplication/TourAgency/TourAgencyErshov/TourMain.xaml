@@ -1,4 +1,4 @@
-﻿<Window x:Class="TourAgencyErshov.TourMain"
+<Window x:Class="TourAgencyErshov.TourMain"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -15,8 +15,8 @@
         <Image Source="Resources/logo.png" Grid.Row="0" HorizontalAlignment="Left"></Image>
         <Label HorizontalAlignment="Center" FontSize="72" VerticalAlignment="Center" Content="Турагентство"/>
         <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center">
-            <Button Name="Admin_btn" Grid.Row="0" Height="30" Width="110" Margin="0 15 0 0" Click="Adm_Click">Администратор</Button>
-            <Button Name="User_btn" Grid.Row="0" Height="30" Width="110" Margin="0 15 0 0" Click="Usr_Click">Пользователь</Button>
+            <Button Name="Admin_btn" Grid.Row="0" Height="30" Width="110" Margin="0 15 0 0" Click="Adm_Click">Туры</Button>
+            <Button Name="User_btn" Grid.Row="0" Height="30" Width="110" Margin="0 15 0 0" Click="Usr_Click">Штрих-код</Button>
             <Button Name="Hotels_btn" Grid.Row="0" Height="30" Width="110" Margin="0 15 0 0" Click="Htl_Click">Hotels</Button>
 
             <Button Name="Exit_btn" Grid.Row="0" Height="30" Width="110" Margin="0 15 0 0" Click="Exit_Click" Visibility="Collapsed">Выход</Button>
