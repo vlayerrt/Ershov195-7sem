@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,15 +32,14 @@ namespace TourAgencyErshov
         {
             InitializeComponent();
             App.modeldb = new TourAgencyEVEntities();
+            TourAgencyEVEntities.CurrentUser = App.CurrentUser;
+            var CurrentUser = App.Context.Users.FirstOrDefault();
 
 
-            UserTB.Text = TourAgencyEVEntities.CurrentUser.Staff.Name;
-            
+            UserTB.Text = CurrentUser.login;
+            RoleTB.Text = "(" + CurrentUser.Role.RoleName + ")";
 
-
-            //RoleTB.Text = "(" + App.Staffss.Role.RoleName + ")";
-
-          /*  var fullFilePath = App.modeldb.CurentStaff.Photo;
+            var fullFilePath = App.Context.Staffs.FirstOrDefault().Photo;
 
             BitmapImage bitmap = new BitmapImage();
             bitmap.BeginInit();
@@ -48,7 +47,7 @@ namespace TourAgencyErshov
             bitmap.EndInit();
 
             UserPhoto.Source = bitmap;
-*/
+
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += timerTick;
             timer.Start();
