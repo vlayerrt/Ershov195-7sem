@@ -29,19 +29,22 @@ namespace TourAgencyErshov
         public userpage()
         {
             InitializeComponent();
-/*
-            UserTB.Text = App.UserList.Name;
-            RoleTB.Text = "(" + App.UserList.Role.RoleName + ")";
+            App.modeldb = new TourAgencyEVEntities();
+            TourAgencyEVEntities.CurrentUser = App.CurrentUser;
+            var CurrentUser = App.Context.Users.FirstOrDefault();
 
-            var fullFilePath = App.UserList.Photo;*/
 
-          /*  BitmapImage bitmap = new BitmapImage();
+            UserTB.Text = CurrentUser.login;
+            RoleTB.Text = "(" + CurrentUser.Roles.RoleName + ")";
+
+            var fullFilePath = App.Context.Staff.FirstOrDefault().Photo;
+
+            BitmapImage bitmap = new BitmapImage();
             bitmap.BeginInit();
             bitmap.UriSource = new Uri(fullFilePath, UriKind.Relative);
             bitmap.EndInit();
 
             UserPhoto.Source = bitmap;
-*/
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += timerTick;
             timer.Start();

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -120,16 +120,15 @@ namespace TourAgencyErshov
                 var currentUser = App.Context.Users.FirstOrDefault(p => p.login == loginBox.Text && p.password == passBox.Password);
                 Console.WriteLine(loginBox.Text);
 
-                if (currentUser == null) 
+                if (currentUser == null)
                 {
                     MessageBox.Show("Пользователь не найден", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-
                 }
                 else
                 {
                     if (GetCaptcha.Text == symbol)
                     {
-                        MessageBox.Show("Здравствуйте " + currentUser.Role.RoleName + ", " + currentUser.login, "Уведомление",
+                        MessageBox.Show("Здравствуйте " + currentUser.Roles.RoleName + ", " + currentUser.login, "Уведомление",
                             MessageBoxButton.OK, MessageBoxImage.Information);
                         switch (currentUser.RoleID)
                         {

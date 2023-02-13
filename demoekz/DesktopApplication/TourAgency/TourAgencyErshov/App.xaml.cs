@@ -18,7 +18,9 @@ namespace TourAgencyErshov
 
         public static TourAgencyEVEntities modeldb;
 
-        public static User CurrentUser = null;
+        public static Users CurrentUser = null;
+        public static Staff CurrentStaff = null;
+
 
     }
 

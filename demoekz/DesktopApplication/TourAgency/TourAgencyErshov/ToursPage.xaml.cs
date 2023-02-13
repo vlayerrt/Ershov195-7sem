@@ -25,7 +25,7 @@ namespace TourAgencyErshov
         {
             InitializeComponent();
 
-            var alltypes = model.TourAgencyEVEntities.GetContext().TourTypes.ToList();
+            var alltypes = model.TourAgencyEVEntities.GetContext().TourType.ToList();
             alltypes.Insert(0, new model.TourType
             {
                 TourTypeName = "Все типы"
@@ -43,7 +43,7 @@ namespace TourAgencyErshov
 
         private void UpdateTours()
         {
-            var currentTours = model.TourAgencyEVEntities.GetContext().Tours.ToList();
+            var currentTours = model.TourAgencyEVEntities.GetContext().Tour.ToList();
 
            //if (ComboType.SelectedIndex > 0)
                 //currentTours = currentTours.Where(p => p.TourType.Contains(ComboType.SelectedItem as model.TourType)).ToList();
@@ -85,7 +85,7 @@ namespace TourAgencyErshov
 
         private void RefreshData()
         {
-            var data = model.TourAgencyEVEntities.GetContext().Tours.ToList();
+            var data = model.TourAgencyEVEntities.GetContext().Tour.ToList();
 
             // List<Models.Ingredient> listIngredients = _context.Ingredient.ToList();            
 

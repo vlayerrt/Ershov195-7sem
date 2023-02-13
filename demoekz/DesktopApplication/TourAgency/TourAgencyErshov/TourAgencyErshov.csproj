@@ -76,6 +76,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CodePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="HotelsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -106,6 +110,9 @@
     <Compile Include="captcha.xaml.cs">
       <DependentUpon>captcha.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CodePage.xaml.cs">
+      <DependentUpon>CodePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HotelsPage.xaml.cs">
       <DependentUpon>HotelsPage.xaml</DependentUpon>
     </Compile>
@@ -113,10 +120,13 @@
       <DependentUpon>loginpage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Manager.cs" />
-    <Compile Include="model\Country.cs">
+    <Compile Include="model\barcodes.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="model\Hotel.cs">
+    <Compile Include="model\Countries.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model\Hotels.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Model1.Context.cs">
@@ -134,13 +144,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="model\Role.cs">
+    <Compile Include="model\Roles.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Staff.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="model\sysdiagram.cs">
+    <Compile Include="model\sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="model\Tour.cs">
@@ -149,7 +159,7 @@
     <Compile Include="model\TourType.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="model\User.cs">
+    <Compile Include="model\Users.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="ToursPage.xaml.cs">
@@ -221,16 +231,6 @@
     <Resource Include="StaffPhoto\user.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="model\Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="model\Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
     <Resource Include="ToursPhoto\Болгарское наследие.png" />
     <Resource Include="ToursPhoto\Волшебный Восток.png" />
     <Resource Include="ToursPhoto\Город с большими амбициями.png" />
@@ -260,6 +260,68 @@
     <None Include="Resources\logo.ico" />
     <None Include="Resources\logo.png" />
     <Resource Include="Resources\picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="model\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="model\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Accessibility">
+      <Guid>{1EA4DBF0-3C3B-11CF-810C-00AA00389B71}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Access.Dao">
+      <Guid>{4AC9E1DA-5BAD-4AC7-86E3-24F4CDCECA28}</Guid>
+      <VersionMajor>12</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

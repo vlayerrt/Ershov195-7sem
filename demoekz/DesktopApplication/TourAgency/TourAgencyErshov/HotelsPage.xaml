@@ -17,7 +17,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название отеля" Binding="{Binding HotelName}" Width="*"></DataGridTextColumn>
                 <DataGridTextColumn Header="Рейтинг" Binding="{Binding Stars}" Width="150"></DataGridTextColumn>
-                <DataGridTextColumn Header="Страна" Binding="{Binding Country.CountryName}" Width="250"></DataGridTextColumn>
+                <DataGridTextColumn Header="Страна" Binding="{Binding Countries.CountryName}" Width="250"></DataGridTextColumn>
                 <DataGridTemplateColumn Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -27,7 +27,9 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Добавить" Grid.Row="1" HorizontalAlignment="Left" Name="BtnAdd" Click="BtnAdd_Click"></Button>
+        <Button Content="Добавить" Grid.Row="1"  HorizontalAlignment="Left" Name="BtnAdd" Click="BtnAdd_Click"></Button>
         <Button Content="Удалить" Grid.Row="1" HorizontalAlignment="Right" Name="BtnDelete" Click="BtnDelete_Click"></Button>
+       
+
     </Grid>
 </Page>

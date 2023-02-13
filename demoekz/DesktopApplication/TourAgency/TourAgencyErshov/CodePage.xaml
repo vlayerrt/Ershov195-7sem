@@ -35,9 +35,11 @@
                 <InkCanvas x:Name="barcodeCan" Height="250" Width="347" Background="White" EditingMode="GestureOnly"  IsEnabled="False"/>
             </Border>
 
-            <TextBox x:Name="CodeTB" HorizontalAlignment="Center" Width="200" Height="30" Margin="0,16" SpellCheck.IsEnabled="True" TextChanged="CodeTB_TextChanged" MaxLength="13"/>
-
-            <Button x:Name="SaveBtn" Content="Печать" Height="30" Click="SaveBtn_Click"/>
+            <TextBox x:Name="CodeTB" HorizontalAlignment="Center" Text="{Binding barcode}" Width="200" Height="30" Margin="0,16" SpellCheck.IsEnabled="True" TextChanged="CodeTB_TextChanged" MaxLength="13"/>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="PrintBtn" Content="Печать" Height="30" Click="PrintBtn_Click"/>
+            <Button x:Name="SaveBtn" Content="Сохранить" Height="30" Click="SaveBtn_Click"/>
+        </StackPanel>
 
         </StackPanel>
     </Grid>

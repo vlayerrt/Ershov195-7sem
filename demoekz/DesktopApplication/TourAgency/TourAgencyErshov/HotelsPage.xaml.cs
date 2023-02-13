@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TourAgencyErshov.model;
+
 
 namespace TourAgencyErshov
 {
@@ -28,7 +30,7 @@ namespace TourAgencyErshov
 
         private void BtnEdit_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MainFrame.Navigate(new AddEditPage((sender as Button).DataContext as model.Hotel));
+            Manager.MainFrame.Navigate(new AddEditPage((sender as Button).DataContext as model.Hotels));
 
         }
 
@@ -39,16 +41,16 @@ namespace TourAgencyErshov
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
-            var hotelsForRemoving = DGridHotels.SelectedItems.Cast<model.Hotel>().ToList();
+            var hotelsForRemoving = DGridHotels.SelectedItems.Cast<model.Hotels>().ToList();
             if ( MessageBox.Show($"Вы уверены, что хотите удалить следующие {hotelsForRemoving.Count()} элементов?", "Внимение", 
                 MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 try
                 {
-                    model.TourAgencyEVEntities.GetContext().Hotels.RemoveRange(hotelsForRemoving);
-                    model.TourAgencyEVEntities.GetContext().SaveChanges();
+                    TourAgencyEVEntities.GetContext().Hotels.RemoveRange(hotelsForRemoving);
+                    TourAgencyEVEntities.GetContext().SaveChanges();
                     MessageBox.Show("Данные успешно удалены");
-                DGridHotels.ItemsSource = model.TourAgencyEVEntities.GetContext().Hotels.ToList();
+                DGridHotels.ItemsSource = TourAgencyEVEntities.GetContext().Hotels.ToList();
 
                 }
                 catch (Exception ex)
@@ -62,8 +64,8 @@ namespace TourAgencyErshov
         {
             if (Visibility == Visibility.Visible)
             {
-                model.TourAgencyEVEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-                DGridHotels.ItemsSource = model.TourAgencyEVEntities.GetContext().Hotels.ToList();
+                TourAgencyEVEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                DGridHotels.ItemsSource = TourAgencyEVEntities.GetContext().Hotels.ToList();
             }
         }
     }

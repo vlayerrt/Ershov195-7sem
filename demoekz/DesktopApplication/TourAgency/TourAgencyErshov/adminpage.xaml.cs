@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,9 +37,9 @@ namespace TourAgencyErshov
 
 
             UserTB.Text = CurrentUser.login;
-            RoleTB.Text = "(" + CurrentUser.Role.RoleName + ")";
+            RoleTB.Text = "(" + CurrentUser.Roles.RoleName + ")";
 
-            var fullFilePath = App.Context.Staffs.FirstOrDefault().Photo;
+            var fullFilePath = App.Context.Staff.FirstOrDefault().Photo;
 
             BitmapImage bitmap = new BitmapImage();
             bitmap.BeginInit();
@@ -64,6 +64,17 @@ namespace TourAgencyErshov
             {
                 timer.Stop();
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CreateBarcode_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new CodePage(null));
+
         }
     }
 }

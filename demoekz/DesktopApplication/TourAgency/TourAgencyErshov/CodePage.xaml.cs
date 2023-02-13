@@ -24,6 +24,7 @@ namespace TourAgencyErshov
         Dictionary<int, List<int>> dictB = new Dictionary<int, List<int>>(10);
         Dictionary<int, List<int>> dictC = new Dictionary<int, List<int>>(10);
         Dictionary<int, List<string>> numGroup = new Dictionary<int, List<string>>(10);
+        private model.barcodes _newCode = new model.barcodes();
 
         public CodePage()
         {
@@ -31,6 +32,9 @@ namespace TourAgencyErshov
 
             FillDict();
             Load("0000000000000");
+
+            DataContext = _newCode;
+
 
         }
 
@@ -277,6 +281,22 @@ namespace TourAgencyErshov
         }
 
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (_newCode.id == 0)
+                model.TourAgencyEVEntities.GetContext().barcodes.Add(_newCode);
+
+            try
+            {
+                model.TourAgencyEVEntities.GetContext().SaveChanges();
+                MessageBox.Show("Информация успешно сохранена.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
+
+        private void PrintBtn_Click(object sender, RoutedEventArgs e)
         {
             try
             {

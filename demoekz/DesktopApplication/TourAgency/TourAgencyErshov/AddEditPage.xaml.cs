@@ -20,8 +20,8 @@ namespace TourAgencyErshov
     /// </summary>
     public partial class AddEditPage : Page
     {
-        private model.Hotel _currentHotel = new model.Hotel();
-        public AddEditPage(model.Hotel  selectedHotel)
+        private model.Hotels _currentHotel = new model.Hotels();
+        public AddEditPage(model.Hotels  selectedHotel)
         {
             InitializeComponent();
 
@@ -39,7 +39,7 @@ namespace TourAgencyErshov
                 errors.AppendLine("Укажите Навзание отеля");
             if (_currentHotel.Stars < 1 || _currentHotel.Stars > 5)
                 errors.AppendLine("Рейтинг - от 1 до 5");
-            if (_currentHotel.Country == null)
+            if (_currentHotel.CountryCode == null)
                 errors.AppendLine("Выберите страну");
 
             if (errors.Length > 0)
